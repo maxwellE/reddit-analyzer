@@ -1,11 +1,14 @@
 require "bundler/capistrano"
+set :default_environment, {
+'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+}
 
 server "66.228.34.241", :web, :app, :db, primary: true
 set :application, "reddit-analyzer"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
-set :use_sudo, false
+set :use_sudo, true
 
 set :scm, :git
 set :repository,  "git@github.com:maxwellE/reddit-analyzer.git"
