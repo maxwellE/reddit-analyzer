@@ -1,3 +1,6 @@
+require "bundler/capistrano"
+
+server "66.228.34.241", :web, :app, :db, primary: true
 set :application, "reddit-analyzer"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
