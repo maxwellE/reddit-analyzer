@@ -1,7 +1,7 @@
 require "bundler/capistrano"
 set :bundle_flags, "--deployment --quiet --binstubs --shebang ruby-local-exec"
 set :default_environment, {
-'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+  'PATH' => "/home/youruser/.rbenv/shims:/home/deployer/.rbenv/bin:$PATH"
 }
 
 server "66.228.34.241", :web, :app, :db, primary: true
