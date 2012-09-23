@@ -32,11 +32,5 @@ gem 'jquery-rails'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
-# Use unicorn as the app server
- gem 'unicorn'
-
-# Deploy with Capistrano
- gem 'capistrano'
-
 # To use debugger
 # gem 'debugger'
