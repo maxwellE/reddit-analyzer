@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 gem 'pry'
 gem 'oj'
 gem 'meta_search'

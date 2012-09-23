@@ -2,10 +2,22 @@
     <td><%=post.presence_score%></td>
     <td><%=post.highest_presence_score%></td>
     <td><%=post.upvotes%></td>
-    <td><%=post.title%></td>
-    <td><a href='<%=post.link%>'><%=post.link%></a></td>
+    <td>
+    <%if post.title.length > 65%>  
+      <div class="expandable"><%=post.title%></div>
+  <%else%>
+<%=post.title%>
+    <%end%>
+  </td>
+  <td>
+    <a href='<%=post.link%>'><%=post.link%></a>
+  </td>
     <td><%=post.subreddit%></td>
-    <td><%=post.front_page%></td>
+    <%if post.front_page%>
+      <td><b>Yes</b></td>
+    <%else%>
+      <td>No</td>
+    <%end%>
     <td><%=post.poster%></td>
     <td><%=post.posted_at.to_formatted_s(:long_ordinal)%></td>
 </tr>

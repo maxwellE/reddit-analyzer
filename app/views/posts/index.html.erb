@@ -1,0 +1,28 @@
+<h4>Top Posts today (sorted descending by presence score)</h4>
+<%= paginate @posts%>
+<table class="table table-bordered table-condensed table-hover">
+  <thead>
+    <tr>
+  <th><%= sort_link @search, :presence_score%></th>
+
+  <th><%= sort_link @search, :highest_presence_score, :default => "desc"%></th>
+
+    <th><%= sort_link @search, :upvotes%></th>
+
+    <th>Title</th>
+
+    <th>Post Url</th>
+
+    <th>Subreddit</th>
+    <th>Currently on 'Front Page'?</th>
+
+    <th>Poster</th>
+
+    <th>Posted At</th>
+  </tr>
+</thead>
+<tbody>
+  <%=render @posts%>
+</tbody>
+</table>
+<%= paginate @posts%>
